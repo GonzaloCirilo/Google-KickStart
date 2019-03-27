@@ -35,7 +35,6 @@ func countSort(e int64, slice []int64){
 }
 
 func radixSort(slice []int64){
-    
     for i := int64(1); max / i > 0; i*=10{
         countSort(i, slice)
     }
@@ -56,23 +55,24 @@ func main() {
 	        s = append(s,a)
 	        prefix = append(prefix,a)
 	        if max < a {
-		    	max = a
+				max = a
 			}
 	    }
 	    scanf("\n")
 		prefix = append(prefix,int64(0))
+		
 		radixSort(s)
-	    prefix[n - int64(1)] = s[n - int64(1)]
+		prefix[n - int64(1)] = s[n - int64(1)]
 	    
 	    for i := n - int64(2); i >= 0; i-- {
 	        prefix[i] = prefix[i + int64(1)] + s[i]
 	    }
 	    min := int64(999999999999)
 	    for i := int64(0); i <= n - p; i++ {
-            aux := p * s[i] - (prefix[i] - prefix[i+p])
-            if aux < min {
-                min = aux
-            }
+			aux := p * s[i] - (prefix[i] - prefix[i+p])
+			if aux < min {
+				min = aux
+			}
 	    }
 	    t--
 	    printf("Case #%d: %d\n", cont, min);
