@@ -53,7 +53,8 @@ func main(){
 				ans++
 			}
 		}
-		printf("Case #%d: %d\n", c, ans)
+		fmt.Printf("Case #%d: %d\n", c, ans)
+		//printf("Case #%d: %d\n", c, ans)
 		c++
 	}
 }
