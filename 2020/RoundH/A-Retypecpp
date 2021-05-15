@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <vector>
+#include <algorithm>
+using namespace std;
+
+int main () {
+
+    int t;
+    scanf("%d", &t);
+    for(int ts = 1; ts <= t; ts++){
+        printf("Case #%d:", ts);
+        long long n, k, s;
+
+        scanf("%lld %lld %lld", &n, &k, &s);
+
+        
+
+        long long r = (k - 1) + 1 + n;
+        long long b = (k - 1) + (k - s) + (n - s + 1);
+
+        printf("% lld\n", min(r,b));
+
+    }
+
+    return 0;
+}
