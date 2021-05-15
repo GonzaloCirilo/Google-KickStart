@@ -4,8 +4,6 @@
 #include <string>
 using namespace std;
 
-// round 709
-
 int main(){
 
     int ts;
